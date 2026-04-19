@@ -1,6 +1,6 @@
 <div align="center">
 
-<video src="assets/banner.gif" width="100%" autoplay loop muted playsinline></video>
+<img src="assets/banner.gif" width="100%" autoplay loop muted playsinline></img>
 
 <br/>
 
