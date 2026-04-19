@@ -2,7 +2,9 @@
 
 # 🌌 Welcome to My Digital Universe
 
-<video src="assets/banner.mp4" width="100%" autoplay loop muted playsinline></video>
+<video width="100%" autoplay loop muted playsinline>
+  <source src="assets/banner.mp4" type="video/mp4">
+</video>
 
 <br/>
 
