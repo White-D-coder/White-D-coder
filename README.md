@@ -2,7 +2,7 @@
 
 # 👋 Welcome to My GitHub
 
-<img src="[https://your-banner-url.gif](https://in.pinterest.com/pin/131448882856434530/)" width="100%" />
+<img src="assets/banner.mp4" width="100%" />
 
 <br>
 
