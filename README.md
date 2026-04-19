@@ -2,7 +2,7 @@
 
 # 🌌 Welcome to My Digital Universe
 
-![Banner](assets/banner.mp4)
+![Banner](assets/banner.gif)
 
 <br/>
 
