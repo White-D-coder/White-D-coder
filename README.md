@@ -1,8 +1,5 @@
 <div align="center">
-
-# 🌌 Welcome to My Digital Universe
-
-<img src="assets/eyeofdeath.jpg" width="100%" autoplay loop muted playsinline></img>
+  <img src="assets/custom_banner.webp" width="100%">
 
 <br/>
 
@@ -102,3 +99,4 @@ Whether you have a question, a project idea, or just want to talk about AI, feel
 </p>
 
 </div>
+
