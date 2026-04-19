@@ -1,8 +1,6 @@
 <div align="center">
 
-# 🌌 Welcome to My Digital Universe
-
-![Banner](assets/banner.gif)
+<video src="assets/banner.gif" width="100%" autoplay loop muted playsinline></video>
 
 <br/>
 
