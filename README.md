@@ -4,7 +4,7 @@
   <br/>
 
   <h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Cinzel+Decorative&weight=700&size=45&pause=1000&color=FFFFFF&center=true&vCenter=true&width=600&lines=WHITE+D+CODER" alt="WHITE D CODER" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Cinzel+Decorative&weight=700&size=45&pause=1000&color=FFFFFF&center=true&vCenter=true&width=600&lines=DEEPTANU" alt="WHITE D CODER" />
   </h1>
 
   <p align="center">
