@@ -26,30 +26,6 @@
 </div>
 
 ---
-<div align="center">
-<img src="assets/eyeofdeath.jpg" width="100%" alt="banner"/>
-
-<br/>
-
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Cinzel&size=15&duration=3000&pause=1200&color=888888&center=true&vCenter=true&width=700&lines=Full+Stack+Developer+%7C+MERN+Stack;SIH+2024+Grand+Finalist+%26+Runner-Up+%F0%9F%8F%86;Agentic+AI+%7C+Real-Time+Systems+%7C+UAV+Telemetry;The+night+is+dark+and+full+of+bugs.)
-
-</div>
-
-<br/>
-
----
-
-<div align="center">
-
-```
- ════════════════════════════════════════════════════════
-      刀   When you play the game of code, you ship or you die.   刀
- ════════════════════════════════════════════════════════
-```
-
-</div>
-
----
 
 ## 〔 I — The Warrior's Scroll 〕
 
