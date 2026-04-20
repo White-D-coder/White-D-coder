@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/custom_banner.webp" width="100%">
+  <img src="assets/eyeofdeath.jpg" width="100%">
 
 <br/>
 
