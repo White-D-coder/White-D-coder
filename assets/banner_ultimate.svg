@@ -115,7 +115,7 @@
 
   <!-- Center Content -->
   <g transform="translate(600, 233)">
-    <text y="-100" class="label">PORTFOLIO SHOWCASE</text>
+    <text y="-100" class="label">Building the future, one line of code at a time</text>
     <line x1="-200" y1="-75" x2="200" y2="-75" class="hr" />
     <text y="20" class="name">WHITE D CODER</text>
     <line x1="-200" y1="60" x2="200" y2="60" class="hr" />
