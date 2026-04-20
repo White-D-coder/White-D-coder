@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; background: #000; display: flex; align-items: center; justify-content: center; height: 100vh; overflow: hidden; }
+        
+        .banner-container {
+            position: relative;
+            width: 900px;
+            height: 350px;
+            background: url('assets/eyeofdeath.jpg') center/cover no-repeat;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .vignette {
+            position: absolute; inset: 0;
+            background:
+              radial-gradient(ellipse 80% 80% at 50% 50%, transparent 20%, rgba(0,0,0,0.65) 80%, rgba(0,0,0,0.97) 100%),
+              linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 30%, transparent 65%, rgba(0,0,0,0.95) 100%);
+        }
+        
+        .grain {
+            position: absolute; inset: 0; opacity: 0.045;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 150px 150px;
+            animation: grainMove 0.4s steps(1) infinite; pointer-events: none;
+        }
+        @keyframes grainMove {
+            0%{background-position:0 0} 25%{background-position:-30px 15px}
+            50%{background-position:15px -30px} 75%{background-position:-15px -15px}
+        }
+        
+        .sweep {
+            position: absolute; inset: 0;
+            background: linear-gradient(105deg, transparent 0%, transparent 40%, rgba(255,255,255,0.018) 50%, transparent 60%, transparent 100%);
+            animation: sweepAnim 8s ease-in-out infinite; pointer-events: none;
+        }
+        @keyframes sweepAnim {
+            0%{transform:translateX(-100%);opacity:0} 10%{opacity:1}
+            90%{opacity:1} 100%{transform:translateX(100%);opacity:0}
+        }
+        
+        #particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+        .p {
+            position: absolute; border-radius: 50%; background: rgba(255,255,255,0.55);
+            animation: floatUp linear infinite;
+        }
+        @keyframes floatUp {
+            0%{transform:translate(0,0) rotate(0deg);opacity:0}
+            8%{opacity:1} 92%{opacity:0.4}
+            100%{transform:translate(var(--dx),-430px) rotate(var(--rot));opacity:0}
+        }
+        
+        .corner { position: absolute; width:28px; height:28px; border:1px solid rgba(255,255,255,0.18); opacity:0; animation:cornerFade 1s ease forwards; animation-delay:2.8s; }
+        .corner.tl{top:16px;left:18px;border-right:none;border-bottom:none}
+        .corner.tr{top:16px;right:18px;border-left:none;border-bottom:none}
+        .corner.bl{bottom:16px;left:18px;border-right:none;border-top:none}
+        .corner.br{bottom:16px;right:18px;border-left:none;border-top:none}
+        @keyframes cornerFade{to{opacity:1}}
+        
+        .rule-left,.rule-right {
+            position:absolute; top:50%; transform:translateY(-50%);
+            width:1px; height:0;
+            background:linear-gradient(to bottom,transparent,rgba(255,255,255,0.12),transparent);
+            animation:ruleGrow 1.2s ease forwards; animation-delay:2s;
+        }
+        .rule-left{left:52px} .rule-right{right:52px}
+        @keyframes ruleGrow{to{height:180px}}
+        
+        .scanlines {
+            position:absolute; inset:0; pointer-events:none;
+            background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.025) 3px,rgba(0,0,0,0.025) 4px);
+        }
+        
+        .kanji { position:absolute; font-size:72px; color:rgba(255,255,255,0.03); font-family:serif; pointer-events:none; animation:kanjiPulse 6s ease-in-out infinite alternate; }
+        .kanji.left{left:28px;top:50%;transform:translateY(-50%);animation-delay:0s}
+        .kanji.right{right:28px;top:50%;transform:translateY(-50%);animation-delay:3s}
+        @keyframes kanjiPulse{0%{color:rgba(255,255,255,0.02)}100%{color:rgba(255,255,255,0.07)}}
+        
+        .content { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+        
+        .label-top {
+            font-family:'Cinzel',serif; font-size:9.5px; font-weight:400;
+            letter-spacing:9px; color:rgba(255,255,255,0.38); text-transform:uppercase;
+            opacity:0; transform:translateY(-8px);
+            animation:slideDown 0.9s cubic-bezier(0.16,1,0.3,1) forwards; animation-delay:0.4s;
+            margin-bottom:14px;
+        }
+        @keyframes slideDown{to{opacity:1;transform:translateY(0)}}
+        
+        .hr { width:0; height:1px; background:linear-gradient(to right,transparent,rgba(255,255,255,0.28),transparent); animation:hrExpand 1s cubic-bezier(0.16,1,0.3,1) forwards; }
+        .hr.top{animation-delay:0.9s;margin-bottom:18px}
+        .hr.bottom{animation-delay:1.8s;margin-top:18px}
+        @keyframes hrExpand{to{width:260px}}
+        
+        .name {
+            font-family:'Cinzel Decorative',serif; font-size:46px; font-weight:700;
+            letter-spacing:5px; text-align:center; line-height:1;
+            opacity:0; transform:translateY(24px) scale(0.96);
+            background:linear-gradient(120deg,rgba(255,255,255,0.85) 0%,rgba(255,255,255,1) 45%,rgba(200,200,200,0.9) 55%,rgba(255,255,255,0.85) 100%);
+            background-size:200% auto;
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+            text-shadow:none;
+            animation:nameIn 1.2s cubic-bezier(0.16,1,0.3,1) forwards, shimmer 4s linear 2.5s infinite;
+            animation-delay:1.1s,2.5s;
+        }
+        @keyframes nameIn{to{opacity:1;transform:translateY(0) scale(1)}}
+        @keyframes shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
+        
+        .label-bottom {
+            font-family:'Cinzel',serif; font-size:9px; letter-spacing:7px;
+            color:rgba(255,255,255,0); text-transform:uppercase;
+            animation:tagIn 1s ease forwards; animation-delay:2.2s; margin-top:14px;
+        }
+        @keyframes tagIn{to{color:rgba(255,255,255,0.32)}}
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <div class="vignette"></div>
+        <div class="grain"></div>
+        <div class="sweep"></div>
+        <div id="particles"></div>
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+        <div class="rule-left"></div>
+        <div class="rule-right"></div>
+        <div class="kanji left">死</div>
+        <div class="kanji right">生</div>
+        <div class="scanlines"></div>
+        <div class="content">
+            <div class="label-top">Portfolio Showcase</div>
+            <div class="hr top"></div>
+            <div class="name">WHITE D CODER</div>
+            <div class="hr bottom"></div>
+            <div class="label-bottom">AGENTIC AI • FULL STACK • AUTOMATION</div>
+        </div>
+    </div>
+
+    <script>
+        const particles = document.getElementById('particles');
+        for (let i = 0; i < 20; i++) {
+            const p = document.createElement('div');
+            p.className = 'p';
+            const size = Math.random() * 3 + 1;
+            p.style.width = size + 'px';
+            p.style.height = size + 'px';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.top = Math.random() * 100 + '%';
+            p.style.setProperty('--dx', (Math.random() * 100 - 50) + 'px');
+            p.style.setProperty('--rot', (Math.random() * 360) + 'deg');
+            p.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            p.style.animationDelay = (Math.random() * 5) + 's';
+            particles.appendChild(p);
+        }
+    </script>
+</body>
+</html>

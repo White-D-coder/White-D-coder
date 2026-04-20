@@ -1,22 +1,23 @@
 <div align="center">
-  <img src="assets/eyeofdeath.jpg" width="100%">
+  <img src="assets/banner.svg" width="100%" alt="Animated Banner">
 
-<br/>
+  <br/>
 
-### ✨ Passionate Full Stack Developer & AI Enthusiast
-Building the future, one line of code at a time.
+  # ✨ Passionate Full Stack Developer & AI Enthusiast
+  **Building the future, one line of code at a time.**
 
-<p align="center">
-  <a href="https://linkedin.com/in/yourprofile">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://yourwebsite.com">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=google-chrome&logoColor=white" />
-  </a>
-  <a href="mailto:your@email.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-</p>
+  <p align="center">
+    <a href="https://linkedin.com/in/yourprofile">
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+    </a>
+    <a href="https://yourwebsite.com">
+      <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=google-chrome&logoColor=white" />
+    </a>
+    <a href="mailto:your@email.com">
+      <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+    </a>
+  </p>
+</div>
 
 ---
 
@@ -37,7 +38,7 @@ I am a **Full Stack Developer (MERN)** with a deep fascination for **Agentic AI*
 </p>
 
 <div align="center">
-  <table>
+  <table align="center">
     <tr>
       <td align="center"><b>Frontend</b></td>
       <td align="center"><b>Backend</b></td>
@@ -97,6 +98,3 @@ Whether you have a question, a project idea, or just want to talk about AI, feel
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=White-D-coder&color=blueviolet&style=flat-square&label=PROFILE+VIEWS" />
 </p>
-
-</div>
-
