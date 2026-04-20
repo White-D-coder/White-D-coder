@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/banner.svg" width="100%" alt="Animated Banner">
+  <img src="assets/eyeofdeath.jpg" width="100%" alt="Animated Banner">
 
   <br/>
 
@@ -13,7 +13,7 @@
     <a href="https://yourwebsite.com">
       <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=google-chrome&logoColor=white" />
     </a>
-    <a href="mailto:your@email.com">
+    <a href="mailto:futuristicthought07@gmail.com">
       <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
     </a>
   </p>

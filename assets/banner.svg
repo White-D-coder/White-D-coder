@@ -32,11 +32,6 @@
         stroke-width: 1;
       }
 
-      @keyframes shimmer {
-        0% { stop-offset: -100%; }
-        100% { stop-offset: 200%; }
-      }
-
       @keyframes sweep {
         0% { transform: translateX(-100%); opacity: 0; }
         10% { opacity: 1; }
@@ -46,10 +41,6 @@
 
       .sweep-rect {
         animation: sweep 8s ease-in-out infinite;
-      }
-      
-      .shimmer-stop {
-        animation: shimmer 4s linear infinite;
       }
     </style>
 
@@ -75,8 +66,7 @@
     </filter>
   </defs>
 
-  <!-- Background Image (Base64 or relative path) -->
-  <!-- Note: Relative paths in SVGs work if served from the same repo -->
+  <!-- Background Image -->
   <image href="eyeofdeath.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
 
   <!-- Vignette Layer -->
@@ -84,6 +74,44 @@
 
   <!-- Noise/Grain Layer -->
   <rect width="100%" height="100%" filter="url(#noise)" opacity="0.5" pointer-events="none" />
+
+  <!-- Particles -->
+  <g id="particles">
+    <!-- Generating 20 random particles with SVG animations -->
+    <circle r="1.5" fill="white" opacity="0.6">
+      <animate attributeName="cx" values="100; 800; 100" dur="15s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="300; 50; 300" dur="20s" repeatCount="indefinite" />
+    </circle>
+    <circle r="1" fill="white" opacity="0.4">
+      <animate attributeName="cx" values="800; 100; 800" dur="18s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="50; 300; 50" dur="25s" repeatCount="indefinite" />
+    </circle>
+    <circle r="2" fill="white" opacity="0.3">
+      <animate attributeName="cx" values="450; 850; 50; 450" dur="30s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="300; 100; 300" dur="22s" repeatCount="indefinite" />
+    </circle>
+    <circle r="1" fill="white" opacity="0.5">
+      <animate attributeName="cx" values="200; 700; 200" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="100; 350; 100" dur="16s" repeatCount="indefinite" />
+    </circle>
+    <circle r="1.2" fill="white" opacity="0.4">
+      <animate attributeName="cx" values="10%; 90%; 10%" dur="20s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="90%; 10%; 90%" dur="18s" repeatCount="indefinite" />
+    </circle>
+    <circle r="0.8" fill="white" opacity="0.6">
+      <animate attributeName="cx" values="50%; 10%; 90%; 50%" dur="25s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="10%; 90%; 10%" dur="22s" repeatCount="indefinite" />
+    </circle>
+    <!-- Add more for density -->
+    <circle r="1" fill="white" opacity="0.2">
+      <animate attributeName="cx" values="30%; 70%; 30%" dur="40s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="20%; 80%; 20%" dur="35s" repeatCount="indefinite" />
+    </circle>
+    <circle r="1.5" fill="white" opacity="0.3">
+      <animate attributeName="cx" values="70%; 30%; 70%" dur="38s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="80%; 20%; 80%" dur="42s" repeatCount="indefinite" />
+    </circle>
+  </g>
 
   <!-- Sweep Animation Layer -->
   <rect width="200" height="100%" fill="rgba(255,255,255,0.02)" class="sweep-rect" filter="blur(40px)" transform="rotate(15)" />
@@ -94,19 +122,10 @@
 
   <!-- Center Content -->
   <g transform="translate(450, 175)">
-    <!-- Top Label -->
     <text y="-80" class="label">PORTFOLIO SHOWCASE</text>
-    
-    <!-- Top HR -->
     <line x1="-150" y1="-60" x2="150" y2="-60" class="hr" />
-    
-    <!-- Main Name -->
     <text y="15" class="name">WHITE D CODER</text>
-    
-    <!-- Bottom HR -->
     <line x1="-150" y1="40" x2="150" y2="40" class="hr" />
-    
-    <!-- Bottom Label -->
     <text y="70" class="label">AGENTIC AI • FULL STACK • AUTOMATION</text>
   </g>
 
