@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/eyeofdeath.jpg" width="100%" alt="Animated Banner">
+  <img src="assets/banner_ultimate.svg" width="100%" alt="White-D-coder Banner">
 
   <br/>
 
